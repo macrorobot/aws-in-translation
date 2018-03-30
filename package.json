@@ -1,0 +1,15 @@
+{
+  "name": "aws-translation",
+  "version": "1.0.0",
+  "description": "translation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.216.1",
+    "browserify": "^16.1.1"
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Amazon Translate</title>
+	<script src="aws-sdk-2.216.1.min.js"></script>
+</head>
+
+<body>
+	<h1 style="text-align: left">Amazon Translate Demo</h1>
+	<br/>
+	<table class="tg">
+		<tr>
+			<th align="left">
+				Source Language Code:
+				<select id="sourceLanguageCodeDropdown">
+					<option value="fr">fr</option>
+					<option value="en">en</option>
+					<option value="ar">ar</option>
+					<option value="de">de</option>
+					<option value="es">es</option>
+					<option value="pt">pt</option>
+					<option value="zh">zh</option>
+				</select>
+			</th>
+			<th align="left">
+				Target Language Code:
+				<select id="targetLanguageCodeDropdown">
+					<option value="en">en</option>
+					<option value="ar">ar</option>
+					<option value="de">de</option>
+					<option value="es">es</option>
+					<option value="fr">fr</option>
+					<option value="pt">pt</option>
+					<option value="zh">zh</option>
+				</select>
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<textarea id="inputText" name="inputText" rows="10" cols="50" placeholder="Text to translate..."></textarea>
+			</th>
+			<th>
+				<textarea id="outputText" name="outputText" rows="10" cols="50" placeholder="Translated text..."></textarea>
+			</th>
+		</tr>
+		<tr>
+			<th align="left">
+				<button type="button" name="translateButton" onclick="doTranslate()">Translate</button>
+				<button type="button" name="synthesizeButton" onclick="doSynthesizeInput()">Synthesize Input Speech</button>
+				<button type="button" name="clearButton" onclick="clearInputs()">Clear</ button>
+			</th>
+			<th align="left">
+				<button type="button" name="synthesizeButton" onclick="doSynthesizeOutput()">Synthesize Output Speech</button>
+			</th>
+		</tr>
+	</table>
+	<script src="bundle.js"></script>
+</body>
+
+</html>
