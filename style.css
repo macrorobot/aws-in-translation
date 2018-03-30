@@ -1,0 +1,45 @@
+#wrapper {
+    width:1170px;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+table {
+    margin: 0 auto;
+}
+button {
+    border-radius:4px;
+    padding:5px 13px;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+button:hover {
+    background: #c6c6c6;
+}
+th>button:first-of-type {
+    margin-left: 10px;
+}
+select {
+    padding:3px;
+    border: 1px solid grey;
+}
+table tr:first-of-type th {
+    font-family: arial,sans-serif;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
+#inputText, #outputText {
+    margin-top:10px;
+}
+#inputText {
+    margin-right: 5px;
+}
+#outputText {
+    margin-left: 5px;
+}
