@@ -1,47 +1,16 @@
-// import * as awsVars from './vars.js';
-const awsVars = require("./vars");
-
 // set the focus to the input box
 document.getElementById("inputText").focus();
-AWS.config.region = "us-east-2"; // Region
+AWS.config.region = "us-east-2";
 var ep = new AWS.Endpoint("https://translate.us-east-2.amazonaws.com");
-/**
-* Change the region and endpoint.
-/**
-* Place your credentials here. The IAM user associated with these credentials must
-have permissions to call
-* Amazon Translate. We recommend using the following permissions policy and
-nothing more, as anyone that has
-* access to this HTML page will also have access to these hard-coded credentials.
-* {
-* "Version": "2012-10-17",
-* "Statement": [
-* {
-* "Action": [
-* "translate:TranslateText",
-* "polly:SynthesizeSpeech"
-* ],
-* "Resource": "*",
-* "Effect": "Allow"
-* }
-* ]
-* }
-*
-* For more information about the AWS Credentials object, see:
-* http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Credentials.html
-*/
-AWS.config.credentials = new AWS.Credentials(
-  awsVars.translateKey,
-  awsVars.translateSecret
-);
-
-// var translate = new AWS.Translate({endpoint: ep, region: AWS.config.region });
-var translate = new AWS.Translate();
 
 AWS.config.credentials = new AWS.Credentials(
-  awsVars.pollyKey,
-  awsVars.pollySecret
+  key.translateKey,
+  key.translateSecret
 );
+
+var translate = new AWS.Translate({endpoint: ep, region: AWS.config.region });
+
+AWS.config.credentials = new AWS.Credentials(key.pollyKey, key.pollySecret);
 var polly = new AWS.Polly();
 
 function doTranslate() {
@@ -144,6 +113,6 @@ function doSynthesize(text, languageCode) {
 function clearInputs() {
   document.getElementById("inputText").value = "";
   document.getElementById("outputText").value = "";
-  document.getElementById("sourceLanguageCodeDropdown").value = "fr";
-  document.getElementById("targetLanguageCodeDropdown").value = "en";
+  document.getElementById("sourceLanguageCodeDropdown").value = "en";
+  document.getElementById("targetLanguageCodeDropdown").value = "fr";
 }

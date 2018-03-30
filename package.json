@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.216.1",
-    "browserify": "^16.1.1"
+    "aws-sdk": "^2.216.1"
   }
 }
